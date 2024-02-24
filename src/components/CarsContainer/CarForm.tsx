@@ -19,7 +19,7 @@ const CarForm: FC<IProps> = ({changeTrigger, carForUpdate, setCarForUpdate}) => 
             setValue('year',carForUpdate.year ,{shouldValidate:true})
             setValue('price',carForUpdate.price ,{shouldValidate:true})
         }
-    }, [carForUpdate]);
+    }, [carForUpdate,setValue]);
 
     const save:SubmitHandler<ICar> = async (car)=>{
         await carService.create(car)
